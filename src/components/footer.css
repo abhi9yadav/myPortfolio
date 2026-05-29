@@ -1,0 +1,42 @@
+/* Add to your main stylesheet */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.footer-animated-border {
+  position: relative;
+  border: none !important; /* Remove the original border */
+  z-index: 1; /* Make sure the content is on top */
+}
+
+.footer-animated-border::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: conic-gradient(from 0deg, #00BCD4, #03A9F4, transparent, transparent);
+  animation: spin 6s linear infinite;
+  border-radius: 10px; /* Adjust if your footer has rounded corners */
+  z-index: -1;
+}
+
+.footer-animated-border::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: conic-gradient(from 180deg, #00BCD4, #03A9F4, transparent, transparent);
+  animation: spin 6s linear infinite reverse;
+  border-radius: 10px;
+  z-index: -1;
+}
