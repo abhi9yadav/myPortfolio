@@ -4,11 +4,12 @@ import { Rocket, Terminal, Code2, Cpu } from 'lucide-react';
 
 const HomeSection = ({ sectionRef, isVisible, currentTheme, scrollToSection, handleMouseEnterInteractive, handleMouseLeaveInteractive, useParticles }) => {
   const canvasRef = useParticles();
+  const heroImage = `${import.meta.env.BASE_URL}ChatGPT%20Image%20Sep%2015,%202026,%2010_05_09%20PM.png`;
 
   return (
     <section id="home" ref={sectionRef} className={`relative flex min-h-screen items-center justify-center ${currentTheme.homeSectionBg} ${currentTheme.textDefault} p-6 md:p-12 overflow-hidden border-b ${currentTheme.navBorder}`}>
       <img
-        src="/ChatGPT%20Image%20Sep%2015,%202026,%2010_05_09%20PM.png"
+        src={heroImage}
         alt="Abhinav Yadav working on software projects"
         className="absolute inset-0 h-full w-full object-cover object-center"
       />
