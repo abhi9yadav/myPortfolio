@@ -118,7 +118,7 @@ Beyond writing code, I am highly interested in using digital solutions for socia
             </div>
             <div className="flex items-center gap-3 bg-slate-800/50 p-3 rounded-lg border border-slate-700">
               <Terminal className="text-emerald-400" size={24} />
-              <span className="text-sm font-medium text-slate-200">500+ DSA Solved</span>
+              <span className="text-sm font-medium text-slate-200">800+ DSA Solved</span>
             </div>
             <div className="flex items-center gap-3 bg-slate-800/50 p-3 rounded-lg border border-slate-700">
               <Target className="text-purple-400" size={24} />

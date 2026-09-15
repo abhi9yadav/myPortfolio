@@ -7,6 +7,13 @@ const HomeSection = ({ sectionRef, isVisible, currentTheme, scrollToSection, han
 
   return (
     <section id="home" ref={sectionRef} className={`relative flex min-h-screen items-center justify-center ${currentTheme.homeSectionBg} ${currentTheme.textDefault} p-6 md:p-12 overflow-hidden border-b ${currentTheme.navBorder}`}>
+      <img
+        src="/ChatGPT%20Image%20Sep%2015,%202026,%2010_05_09%20PM.png"
+        alt="Abhinav Yadav working on software projects"
+        className="absolute inset-0 h-full w-full object-cover object-center"
+      />
+      <div className="absolute inset-0 bg-slate-950/75"></div>
+
       {/* Particle Canvas */}
       <canvas ref={canvasRef} className="absolute inset-0 z-0 opacity-40"></canvas>
 
@@ -22,7 +29,7 @@ const HomeSection = ({ sectionRef, isVisible, currentTheme, scrollToSection, han
         <div className="flex flex-wrap justify-center gap-4 mb-10">
            <span className={`flex items-center gap-2 px-4 py-2 rounded-full border ${currentTheme.navBorder} bg-black/20 backdrop-blur-sm animate-bounce`} style={{ animationDuration: '3s' }}>
               <Terminal size={16} className="text-emerald-400" />
-              <span className={`text-sm font-mono ${currentTheme.textSubtle}`}>400+ DSA Solved</span>
+              <span className={`text-sm font-mono ${currentTheme.textSubtle}`}>800+ DSA Solved</span>
            </span>
            <span className={`flex items-center gap-2 px-4 py-2 rounded-full border ${currentTheme.navBorder} bg-black/20 backdrop-blur-sm animate-bounce`} style={{ animationDuration: '4s', animationDelay: '0.5s' }}>
               <Code2 size={16} className="text-blue-400" />

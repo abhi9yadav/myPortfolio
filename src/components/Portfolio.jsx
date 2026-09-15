@@ -11,7 +11,6 @@ import CustomCursor from './CustomCursor';
 import { themes } from '../constants/themes';
 import useParticles from '../hooks/useParticles'; // Custom hook for particles
 import useIntersectionObserver from '../hooks/useIntersectionObserver'; // Custom hook for scroll observation
-import { generateProjectDescription } from '../api/gemini'; // Gemini API call
 import { Home, User, Lightbulb, Briefcase, Mail } from 'lucide-react'; // Import icons here for sections array
 
 const Portfolio = () => {
@@ -43,35 +42,7 @@ const Portfolio = () => {
   const [cursorColor, setCursorColor] = useState(currentTheme.cursorDefault);
   const [isHoveringInteractive, setIsHoveringInteractive] = useState(false);
 
-  // Initial projects data
-  const initialProjects = [
-    {
-      id: 'qls',
-      title: 'Quantum Ledger System',
-      originalDescription: 'A secure, distributed ledger application for tracking digital assets with cryptographic integrity and real-time synchronization.',
-      currentDescription: 'A secure, distributed ledger application for tracking digital assets with cryptographic integrity and real-time synchronization.',
-      imageUrl: 'https://placehold.co/600x400/212B36/6EE7B7?text=QLS_Project',
-      link: '#',
-    },
-    {
-      id: 'nnv',
-      title: 'Neural Net Visualizer',
-      originalDescription: 'An interactive web-based tool for visualizing neural network architectures and their learning processes in a 3D environment.',
-      currentDescription: 'An interactive web-based tool for visualizing neural network architectures and their learning processes in a 3D environment.',
-      imageUrl: 'https://placehold.co/600x400/212B36/93C5FD?text=NNV_Project',
-      link: '#',
-    },
-    {
-      id: 'aic',
-      title: 'A.I. Companion Interface',
-      originalDescription: 'A natural language processing driven AI companion with adaptive conversational capabilities and personalized interaction modes.',
-      currentDescription: 'A natural language processing driven AI companion with adaptive conversational capabilities and and personalized interaction modes.',
-      imageUrl: 'https://placehold.co/600x400/212B36/FDBA74?text=AIC_Project',
-      link: '#',
-    },
-  ];
-
-  const [projects, setProjects] = useState(initialProjects);
+  
 
   // Update cursor default color when theme changes
   useEffect(() => {
@@ -138,23 +109,7 @@ const Portfolio = () => {
     { id: 'contact', icon: Mail, label: 'Contact' },
   ];
 
-  // Gemini API call handler
-  const handleGenerateDescription = async (projectId, projectTitle, originalDescription) => {
-    const newDescription = await generateProjectDescription(
-      projectId,
-      projectTitle,
-      originalDescription,
-      setLoadingProject,
-      setGeminiError
-    );
-    if (newDescription) {
-      setProjects(prevProjects =>
-        prevProjects.map(p =>
-          p.id === projectId ? { ...p, currentDescription: newDescription } : p
-        )
-      );
-    }
-  };
+ 
 
   return (
     <div className={`min-h-screen ${currentTheme.appBg} font-inter ${currentTheme.textDefault} antialiased relative overflow-hidden`}>
@@ -260,10 +215,7 @@ const Portfolio = () => {
           sectionRef={projectsRef}
           isVisible={projectsVisible}
           currentTheme={currentTheme}
-          projects={projects}
-          loadingProject={loadingProject}
-          geminiError={geminiError}
-          handleGenerateDescription={handleGenerateDescription}
+         
           handleMouseEnterInteractive={handleMouseEnterInteractive}
           handleMouseLeaveInteractive={handleMouseLeaveInteractive}
         />
