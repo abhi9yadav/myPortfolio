@@ -1,5 +1,5 @@
 // src/components/Portfolio.jsx
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Navbar from './Navbar';
 import HomeSection from './HomeSection';
 import AboutSection from './AboutSection';
@@ -16,9 +16,7 @@ import { Home, User, Lightbulb, Briefcase, Mail } from 'lucide-react'; // Import
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [loadingProject, setLoadingProject] = useState(null);
-  const [geminiError, setGeminiError] = useState(null);
-  const [currentThemeKey, setCurrentThemeKey] = useState(() => localStorage.getItem('portfolioTheme') || 'deep-space');
+    const [currentThemeKey, setCurrentThemeKey] = useState(() => localStorage.getItem('portfolioTheme') || 'deep-space');
   const currentTheme = themes[currentThemeKey];
   const [showThemeSwitcher, setShowThemeSwitcher] = useState(false);
 

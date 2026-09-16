@@ -1,14 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 
-const SkillsSection = ({ sectionRef, isVisible, currentTheme, handleMouseEnterInteractive, handleMouseLeaveInteractive }) => {
-  const canvasRef = useRef(null);
-
-  // Added your actual tech stack alongside standard web dev tools
-  const skills = [
+const skills = [
     'React', 'Node.js', 'Express', 'MongoDB', 
     'C++', 'Python', 'AI Agents', 'RAG', 
     'Vector DBs', 'Tailwind', 'Git'
   ];
+
+const SkillsSection = ({ sectionRef, currentTheme, handleMouseEnterInteractive, handleMouseLeaveInteractive }) => {
+  const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
