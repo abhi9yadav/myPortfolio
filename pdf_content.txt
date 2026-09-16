@@ -1,0 +1,52 @@
+Abhinav Yadav
+Registration No.: 20233011
+Bachelor of Technology
+Computer Science and Engineering
+Motilal Nehru National Institute of Technol-
+ogy Allahabad♂phone+91-8004803820
+/envel⌢peabhinav.yadav.mnnit@gmail.com
+/githubGitHub Profile
+/linkedinLinkedIn Profile
+Education
+Motilal Nehru National Institute Of Technology 2023-Present
+Bachelor of Technology in Computer Science and Engineering CPI : 7.57
+SP Inter College Kunda 2021
+Intermediate, Uttar Pradesh Board Percentage: 75.2
+Hathigawan Inter college 2019
+High School, Uttar Pradesh Board Percentage: 84.16
+Projects
+NextCity /external-link-alt/github Oct 2025 – Mar 2026
+MERN application for intelligent complaint management and government workflow automation.
+–Tech Stack: React.js, Node.js, Express.js, MongoDB, Firebase Authentication, Socket.IO, Maps API,
+Axios, AI APIs.
+–Platform Architecture: Engineered a secure, multi-tier civic platform with Firebase-backed
+authentication, establishing hierarchical authorization for five distinct user roles to streamline municipal
+workflows.
+–AI Integration: Integrated AI APIs to automate complaint processing by classifying user-uploaded
+images, generating precise descriptions, and dynamically routing issues to the corresponding
+departments.
+–Lifecycle Management: Orchestrated end-to-end issue lifecycle tracking, featuring community upvoting
+and automated reassignment.
+Shop Circuit /external-link-alt/github Feb 2025 – Mar 2025
+Full-stack e-commerce and rental platform with real-time chat and admin features
+–Tools & Technologies: React.js, Node.js, Express.js, MongoDB, Socket.IO, Tailwind CSS, JWT,
+Cloudinary.
+–Designed and developed a secure full-stack web application for buying, selling, and renting products,
+with 10+ core features including a seamless UI, real-time communication, and an admin dashboard to
+manage listings and user queries.
+–Implemented JWT-based authentication with email-based password reset and profile management;
+integrated real-time messaging and notifications using Socket.IO; added filtering for 5+ product
+categories.
+Technical Skills
+Programming Languages: C, C++, JavaScript, SQL
+Developer Tools: VS Code, GitHub, Postman, MongoDB Compass
+Frameworks & Libraries: Node.js, Express.js, WebSocket
+Databases: MongoDB
+Areas Of Interest
+Soft Skills: Communication, Teamwork & Collaboration, Problem Solving
+Core CS Concepts: Operating Systems, Object-Oriented Programming, Computer Network, Database
+Management System
+Interests: Data Structures & Algorithms, Competitive Programming, Web Development
+Coding Profiles
+–LeetCode: (maximum rating 2011) acb_abhi9 /external-link-alt
+–Codeforces: (maximum rating 1209) abhinav_yadav_cse /external-link-alt
