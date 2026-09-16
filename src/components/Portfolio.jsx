@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Navbar from './Navbar';
 import HomeSection from './HomeSection';
 import AboutSection from './AboutSection';
+import FeaturedSection from './FeaturedSection';
 import SkillsSection from './SkillsSection';
 import ProjectsSection from './ProjectsSection';
 import EducationSection from './EducationSection';
@@ -12,7 +13,7 @@ import CustomCursor from './CustomCursor';
 import { themes } from '../constants/themes';
 import useParticles from '../hooks/useParticles'; // Custom hook for particles
 import useIntersectionObserver from '../hooks/useIntersectionObserver'; // Custom hook for scroll observation
-import { Home, User, Lightbulb, Briefcase, GraduationCap, Mail } from 'lucide-react'; // Import icons here for sections array
+import { Home, User, Sparkles, Lightbulb, Briefcase, GraduationCap, Mail } from 'lucide-react'; // Import icons here for sections array
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -26,6 +27,7 @@ const Portfolio = () => {
   // States for scroll-in animations
   const [homeVisible, setHomeVisible] = useState(false);
   const [aboutVisible, setAboutVisible] = useState(false);
+  const [featuredVisible, setFeaturedVisible] = useState(false);
   const [skillsVisible, setSkillsVisible] = useState(false);
   const [projectsVisible, setProjectsVisible] = useState(false);
   const [educationVisible, setEducationVisible] = useState(false);
@@ -34,6 +36,7 @@ const Portfolio = () => {
   // Refs for Intersection Observer
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
+  const featuredRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
   const educationRef = useRef(null);
@@ -59,11 +62,12 @@ const Portfolio = () => {
 
   // Use custom hook for Intersection Observer
   useIntersectionObserver(
-    [homeRef, aboutRef, skillsRef, projectsRef, educationRef, contactRef],
+    [homeRef, aboutRef, featuredRef, skillsRef, projectsRef, educationRef, contactRef],
     setActiveSection,
     {
       home: setHomeVisible,
       about: setAboutVisible,
+      featured: setFeaturedVisible,
       skills: setSkillsVisible,
       projects: setProjectsVisible,
       education: setEducationVisible,
@@ -108,6 +112,7 @@ const Portfolio = () => {
   const sections = [
     { id: 'home', icon: Home, label: 'Home' },
     { id: 'about', icon: User, label: 'About' },
+    { id: 'featured', icon: Sparkles, label: 'Featured' },
     { id: 'skills', icon: Lightbulb, label: 'Skills' },
     { id: 'projects', icon: Briefcase, label: 'Projects' },
     { id: 'education', icon: GraduationCap, label: 'Education' },
@@ -205,6 +210,13 @@ const Portfolio = () => {
         <AboutSection
           sectionRef={aboutRef}
           isVisible={aboutVisible}
+          currentTheme={currentTheme}
+          handleMouseEnterInteractive={handleMouseEnterInteractive}
+          handleMouseLeaveInteractive={handleMouseLeaveInteractive}
+        />
+        <FeaturedSection
+          sectionRef={featuredRef}
+          isVisible={featuredVisible}
           currentTheme={currentTheme}
           handleMouseEnterInteractive={handleMouseEnterInteractive}
           handleMouseLeaveInteractive={handleMouseLeaveInteractive}

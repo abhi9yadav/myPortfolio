@@ -57,10 +57,10 @@ const EducationSection = ({ sectionRef, isVisible, currentTheme, handleMouseEnte
     },
     {
       platform: 'GeeksforGeeks',
-      username: 'abhinav_gfg',
+      username: 'acb9',
       rating: 'Active',
       solved: '800+',
-      link: 'https://auth.geeksforgeeks.org/user/abhinav_gfg',
+      link: 'https://www.geeksforgeeks.org/profile/acb9',
       icon: '🚀',
       color: 'from-green-500 to-emerald-500',
       bgGlow: 'bg-green-500/10',

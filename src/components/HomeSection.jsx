@@ -1,7 +1,7 @@
 // src/components/HomeSection.jsx
 import React from 'react';
 import { Rocket, Terminal, Code2, Cpu } from 'lucide-react';
-const heroImage="../assets/banner.png";
+import bannerImage from '../assets/banner.png';
 
 const HomeSection = ({ sectionRef, isVisible, currentTheme, scrollToSection, handleMouseEnterInteractive, handleMouseLeaveInteractive, useParticles }) => {
   const canvasRef = useParticles();
@@ -10,9 +10,13 @@ const HomeSection = ({ sectionRef, isVisible, currentTheme, scrollToSection, han
   return (
     <section id="home" ref={sectionRef} className={`relative flex min-h-screen items-center justify-center ${currentTheme.homeSectionBg} ${currentTheme.textDefault} p-6 md:p-12 overflow-hidden border-b ${currentTheme.navBorder}`}>
       <img
-        src={heroImage}
+        src={bannerImage}
         alt="Abhinav Yadav working on software projects"
         className="absolute inset-0 h-full w-full object-cover object-center"
+        onError={(e) => {
+          console.log('Banner image failed to load');
+          e.target.style.display = 'none';
+        }}
       />
       <div className="absolute inset-0 bg-slate-950/75"></div>
 
