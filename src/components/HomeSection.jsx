@@ -43,18 +43,34 @@ const HomeSection = ({ sectionRef, isVisible, currentTheme, scrollToSection, han
            </span>
         </div>
 
-        <h2 className={`text-xl md:text-2xl font-mono tracking-widest mb-4 ${currentTheme.primaryAccentTextSubtle}`}>
+        <h2 className={`text-xl md:text-2xl font-mono tracking-widest mb-4 ${currentTheme.primaryAccentTextSubtle} animate-fade-in`}>
           HELLO, WORLD. I AM
         </h2>
 
         {/* Hover-scaling Hero Text */}
-        <h1 className={`mb-8 text-6xl md:text-8xl font-extrabold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-r ${currentTheme.headingGradientFrom} ${currentTheme.headingGradientTo} drop-shadow-2xl hover:scale-105 transition-transform duration-500`}>
+        <h1 className={`mb-8 text-6xl md:text-8xl font-extrabold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-r ${currentTheme.headingGradientFrom} ${currentTheme.headingGradientTo} drop-shadow-2xl hover:scale-105 transition-transform duration-500 animate-slide-up`}>
           Abhinav Yadav
         </h1>
         
-        <p className={`mb-12 text-xl md:text-2xl font-light leading-relaxed max-w-3xl mx-auto ${currentTheme.textSubtle}`}>
+        <p className={`mb-6 text-xl md:text-2xl font-light leading-relaxed max-w-3xl mx-auto ${currentTheme.textSubtle}`}>
           Computer Science Engineering Student at <span className={`${currentTheme.primaryAccentTextSubtle} font-medium`}>MNNIT Allahabad</span>. I architect intelligent web applications by fusing full-stack development with advanced AI integrations.
         </p>
+
+        {/* Contact Info Pills */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12 text-sm">
+          <a href="tel:+919555235711" className="px-4 py-2 rounded-full bg-slate-800/40 backdrop-blur-sm border border-slate-700 hover:border-emerald-500 transition-all duration-300 hover:scale-105">
+            📞 +91-9555235711
+          </a>
+          <a href="tel:+918004803820" className="px-4 py-2 rounded-full bg-slate-800/40 backdrop-blur-sm border border-slate-700 hover:border-emerald-500 transition-all duration-300 hover:scale-105">
+            📞 +91-8004803820
+          </a>
+          <a href="mailto:abhinav.20233011@mnnit.ac.in" className="px-4 py-2 rounded-full bg-slate-800/40 backdrop-blur-sm border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:scale-105">
+            🎓 abhinav.20233011@mnnit.ac.in
+          </a>
+          <a href="mailto:abhinav.yadav.mnnit@gmail.com" className="px-4 py-2 rounded-full bg-slate-800/40 backdrop-blur-sm border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:scale-105">
+            ✉️ abhinav.yadav.mnnit@gmail.com
+          </a>
+        </div>
         
         {/* Highly Interactive Button */}
         <button

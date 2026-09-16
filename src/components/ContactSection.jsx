@@ -25,16 +25,83 @@ const ContactSection = ({ sectionRef, isVisible, currentTheme, handleMouseEnterI
         </h2>
         
         <p className={`mb-14 text-xl md:text-2xl font-light max-w-2xl mx-auto ${currentTheme.textSubtle} leading-relaxed`}>
-          Whether you want to build scalable MERN architectures, explore AI agentic workflows, or just discuss the future of tech—my data channels are open.
+          Whether you want to build scalable MERN architectures, explore AI agentic workflows, discuss competitive programming strategies, or just chat about tech—my data channels are open.
         </p>
         
+        {/* Contact Methods Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-12">
+          {/* College Email */}
+          <a
+            href="mailto:abhinav.20233011@mnnit.ac.in"
+            className="group relative p-6 rounded-2xl bg-slate-800/30 backdrop-blur-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(59,130,246,0.2)] text-left"
+          >
+            <div className="flex items-center gap-4">
+              <div className="p-3 rounded-full bg-blue-500/10 text-blue-400 text-2xl">🎓</div>
+              <div>
+                <p className="text-sm text-slate-400 mb-1">College Email</p>
+                <p className="text-slate-200 font-mono text-sm group-hover:text-blue-400 transition-colors">
+                  abhinav.20233011@mnnit.ac.in
+                </p>
+              </div>
+            </div>
+          </a>
+
+          {/* Personal Email */}
+          <a
+            href="mailto:abhinav.yadav.mnnit@gmail.com"
+            className="group relative p-6 rounded-2xl bg-slate-800/30 backdrop-blur-xl border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(16,185,129,0.2)] text-left"
+          >
+            <div className="flex items-center gap-4">
+              <div className="p-3 rounded-full bg-emerald-500/10 text-emerald-400 text-2xl">✉️</div>
+              <div>
+                <p className="text-sm text-slate-400 mb-1">Personal Email</p>
+                <p className="text-slate-200 font-mono text-sm group-hover:text-emerald-400 transition-colors">
+                  abhinav.yadav.mnnit@gmail.com
+                </p>
+              </div>
+            </div>
+          </a>
+
+          {/* Phone 1 */}
+          <a
+            href="tel:+919555235711"
+            className="group relative p-6 rounded-2xl bg-slate-800/30 backdrop-blur-xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(168,85,247,0.2)] text-left"
+          >
+            <div className="flex items-center gap-4">
+              <div className="p-3 rounded-full bg-purple-500/10 text-purple-400 text-2xl">📞</div>
+              <div>
+                <p className="text-sm text-slate-400 mb-1">Primary Phone</p>
+                <p className="text-slate-200 font-mono text-lg group-hover:text-purple-400 transition-colors">
+                  +91-9555235711
+                </p>
+              </div>
+            </div>
+          </a>
+
+          {/* Phone 2 */}
+          <a
+            href="tel:+918004803820"
+            className="group relative p-6 rounded-2xl bg-slate-800/30 backdrop-blur-xl border border-slate-700/50 hover:border-pink-500/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(236,72,153,0.2)] text-left"
+          >
+            <div className="flex items-center gap-4">
+              <div className="p-3 rounded-full bg-pink-500/10 text-pink-400 text-2xl">📱</div>
+              <div>
+                <p className="text-sm text-slate-400 mb-1">Secondary Phone</p>
+                <p className="text-slate-200 font-mono text-lg group-hover:text-pink-400 transition-colors">
+                  +91-8004803820
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        
         {/* Advanced Glowing Button */}
-        <div className="relative inline-block group">
+        <div className="relative inline-block group mb-12">
           {/* Animated background blur for glow effect */}
           <div className={`absolute -inset-1 bg-gradient-to-r ${currentTheme.buttonSecondaryBgFrom} ${currentTheme.buttonSecondaryBgTo} rounded-full blur opacity-25 group-hover:opacity-60 transition duration-1000 group-hover:duration-200 animate-pulse`}></div>
           
           <a
-            href="mailto:abhinav854@gmail.com"
+            href="mailto:abhinav.yadav.mnnit@gmail.com"
             onMouseEnter={() => handleMouseEnterInteractive(currentTheme.cursorContact)}
             onMouseLeave={handleMouseLeaveInteractive}
             className={`relative flex items-center gap-3 px-10 py-5 text-xl font-bold rounded-full bg-gradient-to-r ${currentTheme.buttonSecondaryBgFrom} ${currentTheme.buttonSecondaryBgTo} ${currentTheme.buttonSecondaryText} shadow-xl
@@ -42,7 +109,7 @@ const ContactSection = ({ sectionRef, isVisible, currentTheme, handleMouseEnterI
           >
             {/* Button inner shine */}
             <div className="absolute inset-0 w-full h-full bg-white/0 group-hover:bg-white/10 transition-colors duration-300 rounded-full"></div>
-            <span className="relative z-10 tracking-wide">Transmit Signal!</span> 
+            <span className="relative z-10 tracking-wide">Send Message</span> 
             <Mail size={22} className="relative z-10 group-hover:rotate-12 transition-transform duration-300"/>
           </a>
         </div>

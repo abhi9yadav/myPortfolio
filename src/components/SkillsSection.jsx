@@ -5,9 +5,11 @@ const SkillsSection = ({ sectionRef, isVisible, currentTheme, handleMouseEnterIn
 
   // Added your actual tech stack alongside standard web dev tools
   const skills = [
-    'React', 'Node.js', 'Express', 'MongoDB', 
-    'C++', 'Python', 'AI Agents', 'RAG', 
-    'Vector DBs', 'Tailwind', 'Git'
+    'React.js', 'Node.js', 'Express.js', 'MongoDB', 
+    'C', 'C++', 'JavaScript', 'SQL',
+    'Socket.IO', 'JWT', 'Firebase', 
+    'Tailwind CSS', 'Git', 'Postman',
+    'WebSocket', 'AI/ML', 'RAG Systems'
   ];
 
   useEffect(() => {

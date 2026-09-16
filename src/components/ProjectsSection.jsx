@@ -5,32 +5,24 @@ const projects = [
   {
     id: 1,
     title: 'NextCity',
-    shortDesc: 'Civic infrastructure complaint platform.',
-    fullDesc: 'A full MERN-stack platform designed to facilitate civic complaint registration and urban management, improving government transparency in rural areas.',
-    tech: ['React', 'Node.js', 'Express', 'MongoDB'],
+    shortDesc: 'MERN application for intelligent complaint management.',
+    fullDesc: 'Engineered a secure, multi-tier civic platform with Firebase-backed authentication, establishing hierarchical authorization for five distinct user roles to streamline municipal workflows. Integrated AI APIs to automate complaint processing by classifying user-uploaded images, generating precise descriptions, and dynamically routing issues to the corresponding departments. Featured end-to-end issue lifecycle tracking with community upvoting and automated reassignment.',
+    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Firebase', 'Socket.IO', 'Maps API', 'AI APIs'],
     imageUrl: 'https://placehold.co/800x600/0f172a/3b82f6?text=NextCity',
     github: 'https://github.com/abhi9yadav/nextcity',
-    website: 'https://nextcity1.onrender.com'
+    website: 'https://nextcity1.onrender.com',
+    period: 'Oct 2025 – Mar 2026'
   },
   {
     id: 2,
-    title: 'Shop-Circuit',
-    shortDesc: 'Hostel e-commerce platform.',
-    fullDesc: 'Automates shopping journeys using advanced AI agents and the Universal Commerce Protocol for a seamless, intelligent user experience.',
-    tech: ['Node.js', 'React', 'MongoDB'],
+    title: 'Shop Circuit',
+    shortDesc: 'Full-stack e-commerce and rental platform.',
+    fullDesc: 'Designed and developed a secure full-stack web application for buying, selling, and renting products, with 10+ core features including a seamless UI, real-time communication, and an admin dashboard to manage listings and user queries. Implemented JWT-based authentication with email-based password reset and profile management; integrated real-time messaging and notifications using Socket.IO; added filtering for 5+ product categories.',
+    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Socket.IO', 'Tailwind CSS', 'JWT', 'Cloudinary'],
     imageUrl: 'https://placehold.co/800x600/0f172a/10b981?text=Shop-Circuit',
     github: 'https://github.com/abhi9yadav/shop-circuit',
-    website: 'https://shop-circuit.onrender.com/'
-  },
-  {
-    id: 3,
-    title: 'Placement Archive',
-    shortDesc: 'Interview experience filter & archive.',
-    fullDesc: 'A student-focused tool featuring company-wise filtering and pagination to access interview experiences from seniors for assessment preparation.',
-    tech: ['React', 'Frontend Filtering', 'UI/UX'],
-    imageUrl: 'https://placehold.co/800x600/0f172a/8b5cf6?text=Placement+Archive',
-    github: 'https://github.com/abhi9yadav/placement-archive',
-    website: 'https://placement-archive-demo.com'
+    website: 'https://shop-circuit.onrender.com/',
+    period: 'Feb 2025 – Mar 2025'
   }
 ];
 
@@ -78,6 +70,13 @@ const ProjectsSection = () => {
               
               {/* Card Content */}
               <div className="relative z-10 p-8 flex flex-col h-full justify-end">
+                
+                {/* Project Period Badge */}
+                {project.period && (
+                  <div className="absolute top-4 right-4 text-xs font-mono text-emerald-300 bg-emerald-900/40 border border-emerald-500/40 px-3 py-1.5 rounded-full backdrop-blur-md shadow-lg">
+                    {project.period}
+                  </div>
+                )}
                 
                 {/* Tech Stack Floating Badges */}
                 <div className="flex flex-wrap gap-2 mb-4 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">

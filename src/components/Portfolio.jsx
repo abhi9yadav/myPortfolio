@@ -5,13 +5,14 @@ import HomeSection from './HomeSection';
 import AboutSection from './AboutSection';
 import SkillsSection from './SkillsSection';
 import ProjectsSection from './ProjectsSection';
+import EducationSection from './EducationSection';
 import ContactSection from './ContactSection';
 import Footer from './Footer';
 import CustomCursor from './CustomCursor';
 import { themes } from '../constants/themes';
 import useParticles from '../hooks/useParticles'; // Custom hook for particles
 import useIntersectionObserver from '../hooks/useIntersectionObserver'; // Custom hook for scroll observation
-import { Home, User, Lightbulb, Briefcase, Mail } from 'lucide-react'; // Import icons here for sections array
+import { Home, User, Lightbulb, Briefcase, GraduationCap, Mail } from 'lucide-react'; // Import icons here for sections array
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -27,6 +28,7 @@ const Portfolio = () => {
   const [aboutVisible, setAboutVisible] = useState(false);
   const [skillsVisible, setSkillsVisible] = useState(false);
   const [projectsVisible, setProjectsVisible] = useState(false);
+  const [educationVisible, setEducationVisible] = useState(false);
   const [contactVisible, setContactVisible] = useState(false);
 
   // Refs for Intersection Observer
@@ -34,6 +36,7 @@ const Portfolio = () => {
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
+  const educationRef = useRef(null);
   const contactRef = useRef(null);
 
   // Custom Cursor Glow States
@@ -56,13 +59,14 @@ const Portfolio = () => {
 
   // Use custom hook for Intersection Observer
   useIntersectionObserver(
-    [homeRef, aboutRef, skillsRef, projectsRef, contactRef],
+    [homeRef, aboutRef, skillsRef, projectsRef, educationRef, contactRef],
     setActiveSection,
     {
       home: setHomeVisible,
       about: setAboutVisible,
       skills: setSkillsVisible,
       projects: setProjectsVisible,
+      education: setEducationVisible,
       contact: setContactVisible,
     }
   );
@@ -106,6 +110,7 @@ const Portfolio = () => {
     { id: 'about', icon: User, label: 'About' },
     { id: 'skills', icon: Lightbulb, label: 'Skills' },
     { id: 'projects', icon: Briefcase, label: 'Projects' },
+    { id: 'education', icon: GraduationCap, label: 'Education' },
     { id: 'contact', icon: Mail, label: 'Contact' },
   ];
 
@@ -216,6 +221,13 @@ const Portfolio = () => {
           isVisible={projectsVisible}
           currentTheme={currentTheme}
          
+          handleMouseEnterInteractive={handleMouseEnterInteractive}
+          handleMouseLeaveInteractive={handleMouseLeaveInteractive}
+        />
+        <EducationSection
+          sectionRef={educationRef}
+          isVisible={educationVisible}
+          currentTheme={currentTheme}
           handleMouseEnterInteractive={handleMouseEnterInteractive}
           handleMouseLeaveInteractive={handleMouseLeaveInteractive}
         />

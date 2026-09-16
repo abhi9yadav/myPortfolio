@@ -8,11 +8,15 @@ const AboutSection = () => {
   const [showHighlights, setShowHighlights] = useState(false);
 
   // Aapka pura content jise robot type karega
-  const fullText = `Hi, I'm Abhinav Yadav, a Computer Science Engineering student (Batch of 2027) at MNNIT Allahabad. My journey in tech is driven by a desire to build robust systems that solve real-world problems.
+  const fullText = `Hi, I'm Abhinav Yadav, a Computer Science Engineering student (Batch of 2027) at MNNIT Allahabad with a CPI of 7.57. My journey in tech is driven by a desire to build robust systems that solve real-world problems.
 
-I specialize in full-stack development using the MERN stack and have a deep passion for competitive programming, having successfully solved over 400 Data Structures and Algorithms problems. Recently, I've been diving deep into advanced artificial intelligence, building applications powered by agentic workflows, RAG, and vector databases.
+I specialize in full-stack development using the MERN stack (React.js, Node.js, Express.js, MongoDB) and have a deep passion for competitive programming, having successfully solved over 800+ Data Structures and Algorithms problems across LeetCode (max rating 2011), Codeforces (max rating 1209), and GeeksforGeeks.
 
-Beyond writing code, I am highly interested in using digital solutions for social impact. I actively monitor the Indian stock market, unwind by watching intense sci-fi, action, and drama series`;
+My technical arsenal includes C, C++, JavaScript, SQL, along with frameworks like Node.js, Express.js, WebSocket, and databases like MongoDB. I've worked with tools like VS Code, GitHub, Postman, and MongoDB Compass.
+
+Recently, I've been diving deep into advanced artificial intelligence, building applications powered by agentic workflows, RAG, and vector databases. My core interests span Operating Systems, Object-Oriented Programming, Computer Networks, and Database Management Systems.
+
+Beyond writing code, I am highly interested in using digital solutions for social impact. I actively monitor the Indian stock market, unwind by watching intense sci-fi, action, and drama series.`;
 
   // Typewriter Effect Logic
   useEffect(() => {
